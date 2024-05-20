@@ -1,12 +1,14 @@
 import React from 'react';
-import {Campers} from "../components/Campers";
+import { Cards } from "../components/Cards";
+import './CatalogPage.css';
+
 
 const CatalogPage = () => {
     return (
-        <div>
-            <Campers/>
+        <div className="catalog-container">
+            <Cards />
         </div>
     );
 };
 
-export {CatalogPage};
+export { CatalogPage };

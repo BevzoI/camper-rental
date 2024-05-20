@@ -1,3 +1,4 @@
+// HomePage.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
@@ -8,16 +9,18 @@ const HomePage = () => {
     return (
         <div className="home-page">
             <div className="description">
-                <h1>Welcome to Camper World</h1>
+                <h1>Welcome to Card World</h1>
                 <p>
                     Discover the best campers available for your next adventure. Whether you're planning a weekend getaway or a cross-country trip, our selection of top-notch campers will meet all your needs. Enjoy the freedom of the open road with comfort and style.
                 </p>
             </div>
             <div className="banner">
-                <img src="https://nucamprv.com/app/uploads/2023/11/Homepage-Header-TAB-2024.jpg" alt="Camper" className="banner-image" />
+                <img src="https://nucamprv.com/app/uploads/2023/11/Homepage-Header-TAB-2024.jpg" alt="Card" className="banner-image" />
                 <div className="banner-content">
                     <h1>Explore Our Campers</h1>
-                    <button onClick={() => navigate('/catalog')} className="banner-button">View Catalog</button>
+                    <button onClick={() => navigate('/catalog')} className="banner-button button-spacing">View Catalog</button>
+                    <button onClick={() => navigate('/favorites')} className="banner-button button-spacing favorites-button">View Your Favorites</button>
+
                 </div>
             </div>
             <div className="services">
@@ -48,7 +51,7 @@ const HomePage = () => {
                 <div className="testimonial-cards">
                     <div className="testimonial-card">
                         <p>
-                            "Our trip was fantastic! The camper was well-equipped and very comfortable. We will definitely rent from Camper World again."
+                            "Our trip was fantastic! The camper was well-equipped and very comfortable. We will definitely rent from Card World again."
                         </p>
                     </div>
                     <div className="testimonial-card">
