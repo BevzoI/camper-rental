@@ -6,6 +6,7 @@ const FiltersForm = ({ filterCampers }) => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = (data) => {
+        console.log(data);
         filterCampers(data);
         reset();
     };
