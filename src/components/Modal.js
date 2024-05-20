@@ -24,7 +24,7 @@ const Modal = ({ show, onClose, card }) => {
 
     const {
         name, price, rating, location, gallery, description, reviews, engine,
-        form, length, width, height, tank, consumption, adults, transmission, details
+        form, length, width, height, tank, consumption, adults, transmission, details = {}
     } = card || {};
 
     return (
@@ -35,7 +35,7 @@ const Modal = ({ show, onClose, card }) => {
                 <div className="modal-rating-location">
                     <div className="modal-rating">
                         <StarIcon />
-                        <a href="#">{rating} ({reviews?.length || 0} Reviews)</a>
+                        <a href="#reviews">{rating} ({reviews?.length || 0} Reviews)</a>
                     </div>
                     <div className="modal-location">
                         <LocationIcon /> {location}
@@ -69,18 +69,18 @@ const Modal = ({ show, onClose, card }) => {
                                 <span><AdultIcon />{adults} adults</span>
                                 <span><AutomaticIcon />{transmission}</span>
                                 <span><PetrolIcon />{engine}</span>
-                                {details.kitchen > 0 && <span><KitchenIcon />Kitchen</span>}
+                                {details.kitchen && <span><KitchenIcon />Kitchen</span>}
                                 <span><BedIcon />{details.beds} beds</span>
-                                {details.airConditioner > 0 && <span><ACIcon />AC</span>}
-                                {details.bathroom > 0 && <span>Bathroom</span>}
-                                {details.TV > 0 && <span>TV</span>}
-                                {details.CD > 0 && <span>CD</span>}
-                                {details.radio > 0 && <span>Radio</span>}
-                                {details.shower > 0 && <span>Shower</span>}
-                                {details.toilet > 0 && <span>Toilet</span>}
-                                {details.freezer > 0 && <span>Freezer</span>}
-                                {details.hob > 0 && <span>{details.hob} Hob</span>}
-                                {details.microwave > 0 && <span>Microwave</span>}
+                                {details.airConditioner && <span><ACIcon />AC</span>}
+                                {details.bathroom && <span>Bathroom</span>}
+                                {details.TV && <span>TV</span>}
+                                {details.CD && <span>CD</span>}
+                                {details.radio && <span>Radio</span>}
+                                {details.shower && <span>Shower</span>}
+                                {details.toilet && <span>Toilet</span>}
+                                {details.freezer && <span>Freezer</span>}
+                                {details.hob && <span>{details.hob} Hob</span>}
+                                {details.microwave && <span>Microwave</span>}
                                 <span>{details.gas}</span>
                                 <span>{details.water}</span>
                             </div>
@@ -95,7 +95,7 @@ const Modal = ({ show, onClose, card }) => {
                             </div>
                         </div>
                     ) : (
-                        <div className="modal-reviews">
+                        <div className="modal-reviews" id="reviews">
                             {reviews?.length > 0 ? reviews.map((review, index) => (
                                 <div key={index} className="review-item">
                                     <p><strong>{review.reviewer_name}</strong> - {review.reviewer_rating} stars</p>

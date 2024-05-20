@@ -8,10 +8,10 @@ const router = createBrowserRouter([
     {
         path: '', element: <MainLayout/>, children: [
             {
-                index: true, element: <Navigate to={'home'}/>
+                index: true, element: <Navigate to={'camper-rental'}/>
             },
             {
-                path: '/home', element: <HomePage/>
+                path: '/camper-rental', element: <HomePage/>
             },
             {
                 path: '/catalog', element: <CatalogPage/>

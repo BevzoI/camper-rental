@@ -1,15 +1,13 @@
-// Card.js
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './Card.css';
-
-
 import { favoriteActions } from "../store/slices/favoriteSlice";
 import { ACIcon, AdultIcon, AutomaticIcon, BedIcon, HeartIcon, KitchenIcon, LocationIcon, PetrolIcon, RedHeartIcon, StarIcon } from "../icons";
-import {Modal} from "./Modal";
+import { Modal } from "./Modal";
 
 const Card = ({ card }) => {
-    const { _id, name, price, rating, location, adults, reviews, description, engine, details, gallery, transmission } = card;
+    const { _id, name, price, rating, location, adults, reviews, description, engine, details = {}, gallery, transmission } = card;
     const dispatch = useDispatch();
     const isFavorite = useSelector(state => state.favorites.favorites[_id]);
     const [showModal, setShowModal] = useState(false);
@@ -61,9 +59,9 @@ const Card = ({ card }) => {
                     <span><AdultIcon />{adults} adults</span>
                     <span><AutomaticIcon />{transmission}</span>
                     <span><PetrolIcon />{engine}</span>
-                    {details.kitchen > 0 && <span><KitchenIcon />Kitchen</span>}
+                    {details.kitchen && <span><KitchenIcon />Kitchen</span>}
                     <span><BedIcon />{details.beds} beds</span>
-                    {details.airConditioner > 0 && <span><ACIcon />AC</span>}
+                    {details.airConditioner && <span><ACIcon />AC</span>}
                 </div>
                 <button className="card-button" onClick={handleShowMoreClick}>Show more</button>
             </div>

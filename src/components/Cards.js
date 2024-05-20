@@ -4,7 +4,7 @@ import { camperActions } from '../store/slices/camperSlice';
 import { Card } from './Card';
 import { Loader } from '../Loader/Loader';
 import './Cards.css';
-import { FiltersForm } from "./FiltersFrom";
+import { FiltersForm } from "./FiltersForm";
 
 const Cards = () => {
     const { campers, loading } = useSelector((state) => state.campers);
