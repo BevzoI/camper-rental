@@ -17,12 +17,14 @@ const HomePage = () => {
             <div className="banner">
                 <img src="https://nucamprv.com/app/uploads/2023/11/Homepage-Header-TAB-2024.jpg" alt="Card" className="banner-image" />
                 <div className="banner-content">
-                    <h1>Explore Our Campers</h1>
-                    <button onClick={() => navigate('/catalog')} className="banner-button button-spacing">View Catalog</button>
-                    <button onClick={() => navigate('/favorites')} className="banner-button button-spacing favorites-button">View Your Favorites</button>
+    <h1>Explore Our Campers</h1>
+    <div className="flex">
+        <button onClick={() => navigate('/catalog')} className="banner-button button-spacing">View Catalog</button>
+    <button onClick={() => navigate('/favorites')} className="banner-button button-spacing">View Your Favorites</button>
+    </div>
+</div>
 
                 </div>
-            </div>
             <div className="services">
                 <h2>Our Services</h2>
                 <div className="service-cards">

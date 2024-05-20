@@ -1,10 +1,9 @@
-/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-/* General Styles */
+
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -65,10 +64,16 @@ body {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
+.flex {
+    display: flex;
+}
+
 .banner-button {
     margin-top: 20px;
     padding: 12px 25px;
-    font-size: 16px;
+    width: 250px; /* Set the width */
+    height: 50px; /* Set the height */
+    font-size: 20px;
     color: #fff;
     background-color: #E44848;
     border: none;
@@ -77,12 +82,28 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.button-spacing {
+    margin-right: 20px;
+}
+
+
 .banner-button:hover {
     background-color: #CC3232FF;
     transform: scale(1.05);
 }
 
-/* Services & Testimonials Styles */
+
+.favorites-button {
+    margin-top: 10px;
+    background-color: #E44848;
+}
+
+.favorites-button:hover {
+    background-color: #CC3232FF;
+    border-color: white;
+}
+
+
 .services, .testimonials {
     text-align: center;
     margin: 40px 0;

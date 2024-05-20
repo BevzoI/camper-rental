@@ -18,6 +18,9 @@ const router = createBrowserRouter([
             },
             {
                 path: '/favorites', element: <FavoritesPage/>
+            },
+            {
+                path: '*', element: <Navigate to='/camper-rental'/>
             }
         ]
     }
